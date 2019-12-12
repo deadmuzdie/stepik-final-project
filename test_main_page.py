@@ -7,8 +7,17 @@
 #    page.open()                      # открываем страницу 
 #    page.go_to_login_page()          # выполняем метод страницы - переходим на страницу логина
 
-def test_guest_should_see_login_link(browser):
-    link = "http://selenium1py.pythonanywhere.com/"
+#def test_guest_should_see_login_link(browser):
+#    link = "http://selenium1py.pythonanywhere.com/"
+#    page = MainPage(browser, link)
+#    page.open()
+#    page.should_be_login_link()
+
+#should_be_login_url(self):
+def test_guest_should_be_on_login_page(browser):
+#    link = "http://selenium1py.pythonanywhere.com/"
+    link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
     page = MainPage(browser, link)
     page.open()
-    page.should_be_login_link()
+#    page.should_be_login_url()
+    page.should_be_register_form()
